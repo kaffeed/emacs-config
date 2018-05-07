@@ -2,6 +2,8 @@
   (package-install 'helm))
 (unless (package-installed-p 'helm-swoop)
   (package-install 'helm-swoop))
+(unless (package-installed-p 'projectile)
+  (package-install 'projectile))
 
 (use-package helm
   :init

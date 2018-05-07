@@ -70,5 +70,11 @@
 
 (windmove-default-keybindings)
 
+;; setup which-key
+(unless (package-installed-p 'which-key)
+  (package-install 'which-key))
+
+(which-key-mode)
+
 (provide 'setup-general)
 
