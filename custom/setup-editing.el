@@ -65,7 +65,9 @@
 (use-package yasnippet
   :defer t
   :init
-  (add-hook 'prog-mode-hook 'yas-minor-mode))
+  (add-hook 'prog-mode-hook 'yas-minor-mode)
+  :config
+  (use-package common-lisp-snippets))
 
 ;; Package: clean-aindent-mode
 
