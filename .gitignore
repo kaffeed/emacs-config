@@ -14,3 +14,6 @@ elpa
 /org-clock-save.el
 /server/server
 /eshell/history
+/eshell/lastdir
+/ido.last
+/bookmarks
