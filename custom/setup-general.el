@@ -39,15 +39,14 @@
 (use-package company
   :init
   (global-company-mode 1)
-  (delete 'company-semantic company-backends))
-;; (define-key c-mode-map  [(control tab)] 'company-complete)
-;; (define-key c++-mode-map  [(control tab)] 'company-complete)
-
+  (delete 'company-semantic company-backends)
+  (define-key c-mode-map  [(control tab)] 'company-complete)
+  (define-key c++-mode-map  [(control tab)] 'company-complete))
 
 (unless (package-installed-p 'projectile)
   (package-install 'projectile))
 
-;; Package: projejctile
+;; Package: projectile
 (use-package projectile
   :init
   (projectile-global-mode)
@@ -61,10 +60,11 @@
   :bind (("C-x 1" . zygospore-toggle-delete-other-windows)
          ("RET" .   newline-and-indent)))
 
-  ; automatically indent when press RET
+; automatically indent when press RET
 
 ;; activate whitespace-mode to view all whitespace characters
 (global-set-key (kbd "C-c w") 'whitespace-mode)
+
 (unless (package-installed-p 'windmove)
   (package-install 'windmove))
 
@@ -77,4 +77,3 @@
 (which-key-mode)
 
 (provide 'setup-general)
-

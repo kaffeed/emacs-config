@@ -29,6 +29,7 @@
 (require 'setup-cedet)
 (require 'setup-editing)
 (require 'setup-lisp)
+(require 'setup-latex)
 
 ;; color theme
 (load-theme 'wombat)
@@ -43,7 +44,7 @@
     ("2d5c40e709543f156d3dee750cd9ac580a20a371f1b1e1e3ecbef2b895cf0cd2" "5eb4b22e97ddb2db9ecce7d983fa45eb8367447f151c7e1b033af27820f43760" default)))
  '(package-selected-packages
    (quote
-    (slime-autoloads slime common-lisp-snippets lispy yasnippet color-theme-modern color-theme helm-gtags undo-tree helm))))
+    (auctex slime-autoloads slime common-lisp-snippets lispy yasnippet color-theme-modern color-theme helm-gtags undo-tree helm))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
