@@ -32,5 +32,11 @@
 
 (setq rcirc-default-nick "Sinex")
 
+(add-hook 'rcirc-mode-hook
+          (lambda ()
+            (set (make-local-variable 'scroll-conservatively)
+                 8192)))
+
+
 (provide 'setup-irc)
 ;;; setup-irc.el ends here

@@ -13,3 +13,4 @@ elpa
 /projectile.cache
 /org-clock-save.el
 /server/server
+/eshell/history
