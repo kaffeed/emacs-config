@@ -9,3 +9,6 @@ tramp
 .\#*
 
 elpa
+/abbrev_defs
+/projectile.cache
+/org-clock-save.el
