@@ -56,7 +56,7 @@
 
           ;; helm-candidate-number-limit 500 ; limit the number of displayed canidates
           helm-ff-file-name-history-use-recentf t
-          helm-move-to-line-cycle-in-source t ; move to end or beginning of source when reaching top or bottom of source.
+          helm-move-to-line-cycle-in-source nil ; move to end or beginning of source when reaching top or bottom of source.
           helm-buffer-skip-remote-checking t
 
           helm-mode-fuzzy-match t
