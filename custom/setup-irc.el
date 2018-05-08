@@ -28,7 +28,7 @@
 
 (setq rcirc-server-alist
       '(("irc.freenode.net" :port 6697 :encryption tls
-         :channels ("#anime #fhlug #programming"))))
+         :channels ("#anime #fhlug ##programming"))))
 
 (setq rcirc-default-nick "Sinex")
 
