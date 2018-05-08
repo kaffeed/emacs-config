@@ -1,4 +1,8 @@
-;; GROUP: Editing -> Editing Basics
+;;; setup-editing --- package
+;;; Commentary: Editing -> Editing Basics
+
+;;; Code:
+
 (setq global-mark-ring-max 5000         ; increase mark ring to contains 5000 entries
       mark-ring-max 5000                ; increase kill ring to contains 5000 entries
       mode-require-final-newline t      ; add a newline to end of file
@@ -250,8 +254,7 @@ indent yanked text (with prefix arg don't indent)."
 ;; add duplicate line function from Prelude
 ;; taken from prelude-core.el
 (defun prelude-get-positions-of-line-or-region ()
-  "Return positions (beg . end) of the current line
-or region."
+  "Return positions (beg . end) of the current line or region."
   (let (beg end)
     (if (and mark-active (> (point) (mark)))
         (exchange-point-and-mark))
@@ -286,3 +289,4 @@ Position the cursor at it's beginning, according to the current mode."
 (global-set-key (kbd "M-o") 'open-line)
 
 (provide 'setup-editing)
+;;; setup-editing ends here

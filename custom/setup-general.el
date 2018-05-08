@@ -1,3 +1,8 @@
+;;; General setup-general --- autoload
+
+
+;;; Code:
+
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 
@@ -47,7 +52,7 @@
 ;; Package: projectile
 (use-package projectile
   :init
-  (projectile-global-mode)
+  (projectile-mode)
   (setq projectile-enable-caching t))
 
 (unless (package-installed-p 'zygospore)
@@ -100,6 +105,7 @@
 (use-package color-theme-sanityinc-tomorrow
   :init
   (progn
+    (setq custom-safe-themes t)
     (color-theme-sanityinc-tomorrow-night)))
 
 (use-package rainbow-identifiers
@@ -123,5 +129,9 @@
 
 (use-package magit)
 
+(use-package flycheck
+  :config
+  (global-flycheck-mode))
 
 (provide 'setup-general)
+;;;

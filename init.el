@@ -10,8 +10,6 @@
     (add-to-list 'package-archives '("gnu" . (concat proto "://elpa.gnu.org/packages/")))))
 (package-initialize)
 
-;; TODO: MOVE to external scripts
-
 (setq default-directory "~/")
 
 (when (not package-archive-contents)
@@ -32,6 +30,7 @@
 (require 'setup-editing)
 (require 'setup-lisp)
 (require 'setup-latex)
+(require 'setup-ggtags)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -45,7 +44,7 @@
  '(org-agenda-files (quote ("~/git/org/client1" "~/git/client2")))
  '(package-selected-packages
    (quote
-    (magit org-ac org org-checklist bbdb rainbow-identifiers color-theme-sanityinc-tomorrow indent-guide powerline rainbow-delimiters-mode rainbow-delimiters auctex slime-autoloads slime common-lisp-snippets lispy yasnippet color-theme-modern color-theme helm-gtags undo-tree helm))))
+    (ggtags flycheck magit org-ac org org-checklist bbdb rainbow-identifiers color-theme-sanityinc-tomorrow indent-guide powerline rainbow-delimiters-mode rainbow-delimiters auctex slime-autoloads slime common-lisp-snippets lispy yasnippet color-theme-modern color-theme helm-gtags undo-tree helm))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
