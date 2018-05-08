@@ -12,6 +12,8 @@
 
 ;; TODO: MOVE to external scripts
 
+(setq default-directory "~/")
+
 (when (not package-archive-contents)
   (package-refresh-contents))
 
@@ -31,20 +33,19 @@
 (require 'setup-lisp)
 (require 'setup-latex)
 
-;; color theme
-(load-theme 'wombat)
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes (quote (sanityinc-tomorrow-night)))
  '(custom-safe-themes
    (quote
-    ("2d5c40e709543f156d3dee750cd9ac580a20a371f1b1e1e3ecbef2b895cf0cd2" "5eb4b22e97ddb2db9ecce7d983fa45eb8367447f151c7e1b033af27820f43760" default)))
+    ("06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "2d5c40e709543f156d3dee750cd9ac580a20a371f1b1e1e3ecbef2b895cf0cd2" "5eb4b22e97ddb2db9ecce7d983fa45eb8367447f151c7e1b033af27820f43760" default)))
+ '(org-agenda-files (quote ("~/git/org/client1" "~/git/client2")))
  '(package-selected-packages
    (quote
-    (auctex slime-autoloads slime common-lisp-snippets lispy yasnippet color-theme-modern color-theme helm-gtags undo-tree helm))))
+    (magit org-ac org org-checklist bbdb rainbow-identifiers color-theme-sanityinc-tomorrow indent-guide powerline rainbow-delimiters-mode rainbow-delimiters auctex slime-autoloads slime common-lisp-snippets lispy yasnippet color-theme-modern color-theme helm-gtags undo-tree helm))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

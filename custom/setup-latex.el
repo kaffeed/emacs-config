@@ -3,7 +3,7 @@
 (unless (package-installed-p 'auctex)
   (package-install 'auctex))
 
-(use-package tex-site
+(use-package tex
   :ensure
   auctex
   :init

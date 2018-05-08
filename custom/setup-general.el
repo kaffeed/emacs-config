@@ -39,9 +39,7 @@
 (use-package company
   :init
   (global-company-mode 1)
-  (delete 'company-semantic company-backends)
-  (define-key c-mode-map  [(control tab)] 'company-complete)
-  (define-key c++-mode-map  [(control tab)] 'company-complete))
+  (delete 'company-semantic company-backends))
 
 (unless (package-installed-p 'projectile)
   (package-install 'projectile))
@@ -70,10 +68,60 @@
 
 (windmove-default-keybindings)
 
+(unless (package-installed-p 'rainbow-delimiters)
+  (package-install 'rainbow-delimiters))
+
+(use-package rainbow-delimiters
+  :init
+  (progn
+    (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)))
+
+;; setup powerline
+(unless (package-installed-p 'powerline)
+  (package-install 'powerline))
+
+(use-package powerline)
+
+;; setup indent-guide
+(unless (package-installed-p 'indent-guide)
+  (package-install 'indent-guide))
+(use-package indent-guide
+  :init
+  (progn
+    (indent-guide-global-mode)
+    (setq indent-guide-recursive t)))
+
 ;; setup which-key
 (unless (package-installed-p 'which-key)
   (package-install 'which-key))
 
 (which-key-mode)
+
+(use-package color-theme-sanityinc-tomorrow
+  :init
+  (progn
+    (color-theme-sanityinc-tomorrow-night)))
+
+(use-package rainbow-identifiers
+  :init
+  (progn
+    (add-hook 'prog-mode-hook 'rainbow-identifiers-mode)
+    (setq rainbow-identifiers-choose-face-function 'rainbow-identifiers-cie-l*a*b*-choose-face
+          rainbow-identifiers-cie-l*a*b*-lightness 70
+          rainbow-identifiers-cie-l*a*b*-saturation 30
+          rainbow-identifiers-cie-l*a*b*-color-count 20
+          ;; override theme faces
+          rainbow-identifiers-faces-to-override '(highlight-quoted-symbol
+                                                  font-lock-variable-name-face
+                                                  font-lock-function-name-face
+                                                  font-lock-type-face
+                                                  js2-function-param
+                                                  js2-external-variable
+                                                  js2-instance-member
+                                                  js2-private-function-call))))
+
+
+(use-package magit)
+
 
 (provide 'setup-general)
