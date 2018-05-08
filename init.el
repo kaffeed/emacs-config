@@ -61,6 +61,7 @@
 (require 'setup-latex)
 (require 'setup-ggtags)
 (require 'setup-org)
+(require 'setup-irc)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
