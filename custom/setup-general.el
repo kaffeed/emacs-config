@@ -1,5 +1,10 @@
-;;; General setup-general --- autoload
+;;; setup-general.el --- General used packages       -*- lexical-binding: t; -*-
 
+;;; Commentary
+;; Copyright (C) 2018
+
+;; Author: <s.schubert@INOLA-SS>
+;; Keywords: convenience, lisp
 
 ;;; Code:
 
@@ -134,4 +139,3 @@
   (global-flycheck-mode))
 
 (provide 'setup-general)
-;;;
